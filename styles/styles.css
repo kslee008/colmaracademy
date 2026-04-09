@@ -1,21 +1,21 @@
-/* TODO */
-
 /* Reset CSS */
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
 
-/* TODO */
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
-    outline: 1px dashed #ccc;
 }
 
 :root {
     --white: #fff;
+    --light-bg-color: #f8f9fa;
     --main-link-color: #484848;
     --secondary-link-color: #3434c6;
+    --border-radius: 0.5rem;
+    --transition-speed: 0.3s;
 }
 
 html {
@@ -39,6 +39,13 @@ a {
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
     grid-template-rows: repeat(6, min-content);
 
+}
+
+.specfic-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: full-start/full-end;
 }
 
 /** Start of Desktop Section **/
@@ -71,7 +78,7 @@ nav ul li a {
     font-size: 0.75rem;
 }
 
-nav>a {
+nav > a {
     display: flex;
     /* targets logo hyperlinks */
     align-items: center;
@@ -83,23 +90,23 @@ nav>a {
     margin-left: 1.5rem;
 }
 
-nav a span {
+nav > a > span {
     text-transform: uppercase;
     line-height: 2rem;
 }
 
-nav a span:first-of-type {
+nav> a > span:first-of-type {
     font-weight: bold;
     color: #484848;
 }
-
-nav a span:last-of-type {
+ 
+nav > a > span:last-of-type {
     font-weight: lighter;
     color: #aaa;
+    padding-left: 0.25rem;
 }
 
 /* Set up navigation links' styles */
-/* TODO create hover effects */
 
 /* Set up header area */
 header {
@@ -159,7 +166,7 @@ header>div>a:hover {
 
 }
 
-.practice>.imgcontainer>img {
+.practice >.imgcontainer > img {
     max-width: 100%;
     height: auto;
 }
@@ -173,7 +180,7 @@ header>div>a:hover {
     padding-bottom: 1.5rem;
 }
 
-.practice .practice-text p {
+.practice> .practice-text p {
     font-size: small;
     font-weight: lighter;
 }
@@ -196,7 +203,7 @@ header>div>a:hover {
     grid-template-columns: 0.35fr 0.65fr;
     align-items: center;
     border-bottom: 1px solid #e7e7e7;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 }
 
 .events img {
@@ -217,12 +224,15 @@ header>div>a:hover {
 .events .events-text p {
     font-size: small;
     font-weight: lighter;
-    padding: 0.5rem 0;
+    padding-top: 0.5rem;
 }
 
 .events .events-text a {
     font-size: small;
     color: var(--secondary-link-color);
+    display: block;
+    padding-top: 0.5rem;
+    transition: var(--transition-speed);
 }
 
 .events .events-block:last-child {
@@ -235,23 +245,133 @@ header>div>a:hover {
 }
 
 /* Setup course-section */
-.courses-section {
-    grid-column: full-start/full-end;
-    padding: 2rem 4.5rem;
+#start-learning {
+    background-color: #d8d8d8;
+    padding: 2rem 4.5rem 2rem 4.5rem;
+}
+
+#start-learning h1 {
+    display: flex;
+    padding: 2rem 4rem 0;
+    justify-content: center;
+}
+
+#start-learning > .courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 2rem 2rem;
+    gap: 2rem;
+
+}
+
+/* #start-learning .courses .course-card {
+    background-color: var(--white);
+    display: wrap;
+    flex-direction: column;
+} */
+
+#start-learning .courses .course-card {
+    flex-basis: (33.333% - 1.25rem);
+    min-width: 17.5rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 1px solid var(--light-bg-color);
+    transition: transform var(--transition-speed);
+
+}
+
+#start-learning .courses .course-card:hover {
+    transform: translateY(-0.3125);
+}
+
+#start-learming .course-card img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#start-learning .course-card h3 {
+    font-size: large;
+    padding: 1rem 1rem 0;
+}
+
+#start-learning> .courses> .course-card > p {
+    font-size: small;
+    font-weight: lighter;
+    padding: 0 1rem 1.5rem;
+}
+
+
+/* Style for the COURSE */
+
+#start-learning> .courses>.course-card p:first-of-type {
+    font-size: small;
+    font-weight: lighter;
+    color: #aaa;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+#start-learning> .courses>.course-card p:last-of-type {
+    padding-bottom: 1rem;
+}
+
+/* Setup for Thesis section */
+
+#thesis-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    text-align: center;
+}
+ 
+#thesis-title  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
-.courses {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.course-card {
-    background-color: var(--white);
+.thesis-video {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    justify-content: flex-start;
+}
+
+.thesis-video .video-container {
+    padding: 0 1.5rem 0;
+}
+
+.thesis-video .video-container video {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-text 
+{
+    padding-top: 2rem ;
+}
+
+.video-text h3 {
+    padding-bottom: 2rem;
+    border: black;
+}
+
+.video-text p {
+    font-size: small;
+    font-weight: lighter;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#thesis-list .events-block:first-child {
+    background-color: #d8d8d8;
+}
+
+#thesis-list .events-block:last-child {
+    background-color: var(--white);
 }
 
 /* Setup Footer Section */
@@ -274,7 +394,11 @@ footer ul li {
     margin-right: 0.5rem;
 }
 
-/* TODO Setting the hover effect for terms and privacy */
+/* Setting the hover effect for terms and privacy */
+footer ul li:hover {
+    color: #ff5722;
+}
+
 
 /* Hide nav-mobile */
 #nav-mobile {
@@ -296,13 +420,28 @@ footer ul li {
 /** Start of Mobile Section **/
 /** *********************** **/
 
+/* Hide the mobile nav */
+#nav-mobile {
+    display: none;
+}
+
+/* Hide mobile events */
+.events> .events-block >.events-img-mobile {
+    display: none;
+}
+
+.thesis-video-mobile {
+    display: none;
+}
+
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem) {
 
     /* hide the destop navigation */
     nav,
     .practice,
-    .events>.events-block>.events-img-desktop {
+    .events>.events-block>.events-img-desktop,
+    footer>ul {
         display: none;
     }
 
@@ -363,6 +502,7 @@ footer ul li {
     }
 
     .events>.events-block:last-child {
+        padding: 2rem;
         background-color: ver(--white);
     }
 
@@ -375,6 +515,52 @@ footer ul li {
     .events>.events-block>.events-text>h3 {
         padding-top: 1.5rem;
     }
+
+    /* Learning area for mobile */
+    #start-learning .courses .course-card img,
+    #start-learning .courses .course-card h4,
+    #start-learning .courses .course-card p {
+        display: none;
+    }
+
+    #start-learning {
+        background-color: var(--white);
+    }
+
+    #start-learning h1 {
+        display: block;
+        padding: 2rem 4rem 1rem;
+        justify-content: center;
+    }
+
+    #start-learning > .courses {
+        display:flex;
+        flex-direction: column;
+        padding: 0 1rem 2rem;
+        gap: 0.5rem;
+    }
+
+    #start-learning .courses .course-card {
+        background-color: #d8d8d8;
+    }
+
+    #start-learning .courses .course-card h3 {
+        padding: 1rem 1rem 1.5rem;
+        align-items: center;
+    }
+
+    .thesis-video,
+    #thesis-list {
+        display: none;
+    }
+
+    .thesis-video-mobile {
+        display: flex;
+        padding: 1.5rem;
+    }
+
+    /* Thesis area for mobile */
+
 
     footer {
         font-size: small;

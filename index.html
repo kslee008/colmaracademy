@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The meta tag sets the page's viewport to be mobile-friendly -->
 
@@ -28,23 +29,21 @@
         </ul>
     </nav>
 
-    <!-- End of Navbar -->
-
     <!-- 1.1 Start of Mobile Navbar -->
-     <!-- TODO Mobile Navbar -->
-      <nav id="nav-mobile">
+
+    <nav id="nav-mobile">
         <a href=""><img src="./assets/images/ic-logo.svg" alt="Colmar Academy Logo"></a>
         <a href=""><img src="./assets/images/ic-on-campus.svg" alt="On Compus"></a>
         <a href=""><img src="./assets/images/ic-online.svg" alt="Online"></a>
         <a href=""><img src="./assets/images/ic-login.svg" alt="Sign in"></a>
+    </nav>
+    <!-- End of Navbar -->
 
-      </nav>
-        
+    <!-- End of Navbar -->
 
     <!-- 2.  Start of header -->
     <header class="imgcontainer">
-        <img src="./assets/images/banner.jpg" alt="">
-
+        <img src="./assets/images/banner.jpg" alt="Hero Image">
     </header>
 
     <header>
@@ -54,20 +53,16 @@
             <a href="#">Start here</a>
         </div>
     </header>
-
     <!-- End of header -->
 
-
-
-    <!-- TODO -->
     <!-- 3. Start of practice -->
     <section class="practice">
         <div class="imgcontainer">
-            <!-- TODO practive image -->
+
             <img src="./assets/images/information-main.jpg" alt="">
         </div>
         <div class="practice-text">
-            <!-- TODO subheader and copywring text -->
+
             <h1>It doesn't hurt to keep practicing</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A omnis eligendi incidunt soluta provident
                 corrupti similique, saepe officia quo impedit culpa asperiores fugiat cupiditate sunt veritatis rem
@@ -76,10 +71,8 @@
                     Strategist at biring.com</span></p>
         </div>
     </section>
-
     <!-- End of practice -->
 
-    <!-- TODO -->
     <!-- 3.1. Start of events -->
     <section class="events">
         <!-- Event Block 1 -->
@@ -113,72 +106,108 @@
             </div>
         </div>
     </section>
-
     <!-- End of events -->
 
-
-    <!-- TODO -->
     <!-- 4. Start of learning -->
-    <section class="courses-section">
-        <h2>Start learning</h2>
-        <div class="courses">
-            <div class="course-card">
-                <img src="./assets/images/course-software.jpg" alt="">
-                <h3>Software engineering</h3>
-                <p>Courses</p>
-                <p>Web Development, Mobile Development, IOT, APIs</p>
-            </div>
-            <div class="course-card">
-                <img src="./assets/images/course-computer-art.jpg" alt="">
-                <h3>Computer art</h3>
-                <p>Courses</p>
-                <p>Imaging & Design, Web Design, Mobile Graphis & Visual Effects, Computer Anmiation</p>
-            </div>
-            <div class="course-card">
-                <img src="./assets/images/course-design.jpg" alt="">
-                <h3>Design</h3>
-                <p>Courses</p>
-                <p>User Experience Design, User Research, Visual Design</p>
-            </div>
-            <div class="course-card">
-                <img src="" alt="">
-                <h3>Data</h3>
-                <p>Courses</p>
-                <p>Data Science, Big Data,  SQL, Data Visualization</p>
-            </div>
-            <div class="course-card">
-                <img src="" alt="">
-                <h3>Business</h3>
-                <p>Courses</p>
-                <p>Product Development, Business Development, Startup</p>
-            </div>
-            <div class="course-card">
-                <img src="" alt="">
-                <h3>Marketing</h3>
-                <p>Courses</p>
-                <p>Analytics, Content Marketing, Mobile Marketing</p>
-            </div>
+    <section id="start-learning" class="specfic-section">
+        <h1>Start learning</h1>
+        <div class="courses">           
+                <div class="course-card">
+                    <img src="./assets/images/course-software.jpg" alt="">
+                    <h3>Software engineering</h3>
+                    <p>Courses</p>
+                    <p>Web Development, Mobile Development, IOT, APIs</p>
+                </div>
+                <div class="course-card">
+                    <img src="./assets/images/course-computer-art.jpg" alt="">
+                    <h3>Computer art</h3>
+                    <p>Courses</p>
+                    <p>Imaging & Design, Web Design, Mobile Graphis & Visual Effects, Computer Anmiation</p>
+                </div>
+                <div class="course-card">
+                    <img src="./assets/images/course-design.jpg" alt="">
+                    <h3>Design</h3>
+                    <p>Courses</p>
+                    <p>User Experience Design, User Research, Visual Design</p>
+                </div>
+                <div class="course-card">
+                    <img src="./assets/images/course-data.jpg" alt="">
+                    <h3>Data</h3>
+                    <p>Courses</p>
+                    <p>Data Science, Big Data, SQL, Data Visualization</p>
+                </div>
+                <div class="course-card">
+                    <img src="./assets/images/course-business.jpg" alt="">
+                    <h3>Business</h3>
+                    <p>Courses</p>
+                    <p>Product Development, Business Development, Startup</p>
+                </div>
+                <div class="course-card">
+                    <img src="./assets/images/course-marketing.jpg" alt="">
+                    <h3>Marketing</h3>
+                    <p>Courses</p>
+                    <p>Analytics, Content Marketing, Mobile Marketing</p>
+                </div>
         </div>
-        
     </section>
 
     <!-- End of learning -->
 
+    <!-- Start of thesie -->
+    <section id="thesis-title" class="specfic-section">
+        <h1>Thesis exhibit</h1>
+    </section>
 
-    <!-- TODO -->
-    <!-- 5. Star of thesis -->
+    <section class="specfic-section thesis-video-mobile">
+        <video src="./assets/videos/thesis.mp4"></video>
+    </section>
 
+    <section class="thesis-video">
+        <div class="video-container">
+            <video controls>
+                <source src="./assets/videos/thesis.mp4">
+            </video>
+        </div>
 
+        <!-- <div class="video-container">
+            <video src="./assets/videos/thesis.mp4"></video>
+        </div> -->
+
+        <div class="video-text">
+            <h3>Remigine urban</h3>
+            <p>"Curabitur vitae libero in ipsum protitor consequat. Aliquam et commodo lectus, nec consequat neque.
+                Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor
+                consequat, tristique ligula.</p>
+        </div>
+    </section>
+
+    <section id="thesis-list" class="events">
+        <!-- Thesis list 1 -->
+        <div class="events-block">
+            <img class="events-img-desktop" src="./assets/images/thesis-fisma.jpg" alt="">
+            <div class="events-text">
+                <h3>Fisma: Design and Prototype</h3>
+                <p>Designer showcase of new prototype product</p>
+            </div>
+        </div>
+
+        <!-- Thesis list 2 -->
+        <div class="events-block">
+            <img class="events-img-desktop" src="./assets/images/thesis-now-and-then.jpg" alt="">
+            <div class="events-text">
+                <h3>Now and then</h3>
+                <p>Research study about New York</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- End of thesis -->
 
 
     <!-- TODO -->
     <!-- 6. Start of footer -->
     <footer>
-        <p>
-            &copy; 2026 Colmar Academy. All rights reserved.
-
-        </p>
+        <p>&copy; 2026 Colmar Academy. All rights reserved.</p>
         <ul>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
@@ -186,8 +215,5 @@
     </footer>
     <!-- End of footer -->
 
-
-
 </body>
-
 </html>
