@@ -247,11 +247,11 @@ header>div>a:hover {
 /* Setup course-section */
 #start-learning {
     background-color: #d8d8d8;
-    padding: 2rem 4.5rem 2rem 4.5rem;
+    padding: 2rem 0;  
 }
 
 #start-learning h1 {
-    display: flex;
+    display: block;
     padding: 2rem 4rem 0;
     justify-content: center;
 }
